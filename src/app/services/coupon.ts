@@ -34,3 +34,5 @@ export class CouponService {
     return coupons;
   }
 }
+
+export { Coupon };

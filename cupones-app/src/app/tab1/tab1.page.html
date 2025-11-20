@@ -1,17 +1,23 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-segment>
+    <ion-segment-button value="candies" content-id="first">
+      <ion-label>Dulces</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="drinks" content-id="second">
+      <ion-label>Bebidas</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="meats" content-id="third">
+      <ion-label>Carnes</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-segment-view>
+    <ion-segment-content id="first">First</ion-segment-content>
+    <ion-segment-content id="second">Second</ion-segment-content>
+    <ion-segment-content id="third">Third</ion-segment-content>
+  </ion-segment-view>
+
 </ion-content>

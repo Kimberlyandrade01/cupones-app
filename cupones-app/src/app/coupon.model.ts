@@ -11,7 +11,7 @@ export class Coupon {
   private idProduct!: number;
   private img!: string;
   private name!: string;
-  private category!: string;
+  category!: string;
   private discount!: number;
   active: boolean = false;   // ← agregado (YA NO ES private)
 
