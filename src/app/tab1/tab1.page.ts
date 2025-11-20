@@ -8,8 +8,14 @@ import { ExploreContainerComponent } from '../explore-container/explore-containe
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss'],
-  imports: [IonLabel, IonSegmentButton, IonSegment, IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent, IonSegmentView, IonSegmentContent],
-})
+imports: [
+    IonContent,
+    IonSegment,
+    IonSegmentButton,
+    IonLabel,
+    IonSegmentView,
+    IonSegmentContent
+]})
 export class Tab1Page {
     private couponService: CouponService = inject(CouponService);
     coupons: Coupon[] = [];
