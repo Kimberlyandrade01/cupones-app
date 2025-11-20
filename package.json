@@ -13,6 +13,7 @@
   "generate-icons-android": "npx capacitor-assets generate --android"
 },
 
+
   "private": true,
   "dependencies": {
     "@angular/animations": "^20.0.0",
