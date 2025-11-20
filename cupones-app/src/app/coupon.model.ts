@@ -13,12 +13,13 @@ export class Coupon {
   private name!: string;
   private category!: string;
   private discount!: number;
-  private active!: boolean;
+  active: boolean = false;   // ← agregado (YA NO ES private)
+
   private _idProduct: any;
   private _name: any;
   private _discount: any;
   _category: any;
-
+  processCouponData: any;
 
   isEqual(coupon: Coupon) {
     return this._idProduct === coupon._idProduct;
@@ -41,12 +42,18 @@ export class Coupon {
 
   constructor(data: ICoupon) {
     Object.assign(this, data);
+
+    // Garantizar que active siempre exista
+    if (data.active === undefined) {
+      this.active = false;
+    }
   }
+
   public getIdProduct(): number {
     return this.idProduct;
   }
+
   public setIdProduct(value: number) {
     this.idProduct = value;
   }
 }
-
