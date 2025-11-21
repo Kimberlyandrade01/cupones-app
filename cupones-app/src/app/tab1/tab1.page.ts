@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonSegmentButton, IonSegment, IonLabel, IonSegmentView, IonSegmentContent } from '@ionic/angular/standalone';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonSegmentButton, IonSegment, IonLabel, IonSegmentView, IonSegmentContent, IonImg, IonGrid, IonRow, IonCol, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle } from '@ionic/angular/standalone';
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
 
 @Component({
@@ -7,14 +7,14 @@ import { ExploreContainerComponent } from '../explore-container/explore-containe
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss'],
 imports: [
-    IonContent,
     IonSegment,
     IonSegmentButton,
     IonLabel,
     IonSegmentView,
-    IonSegmentContent
-]
+    IonSegmentContent, IonContent]
 })
 export class Tab1Page {
+coupons: any;
   constructor() {}
 }
+

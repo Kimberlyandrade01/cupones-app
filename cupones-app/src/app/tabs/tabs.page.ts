@@ -3,6 +3,7 @@ import { IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel, IonContent, IonSeg
 import { addIcons } from 'ionicons';
 import { triangle, ellipse, square } from 'ionicons/icons';
 
+
 @Component({
   selector: 'app-tabs',
   templateUrl: 'tabs.page.html',
@@ -14,7 +15,7 @@ imports: [
     IonSegmentButton,
     IonLabel,
     IonSegmentView,
-    IonSegmentContent
+    IonSegmentContent,
 ]
 })
 export class TabsPage {

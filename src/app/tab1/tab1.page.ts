@@ -1,30 +1,55 @@
 import { Component, inject } from '@angular/core';
 import { CouponService } from '../services/coupon';
 import { Coupon } from 'cupones-app/src/app/coupon.model';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonSegment, IonSegmentButton, IonLabel, IonSegmentView, IonSegmentContent } from '@ionic/angular/standalone';
-import { ExploreContainerComponent } from '../explore-container/explore-container.component';
+
+import {
+  IonContent,
+  IonSegment,
+  IonSegmentButton,
+  IonLabel,
+  IonSegmentView,
+  IonSegmentContent,
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonCard,
+  IonImg,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardSubtitle
+} from '@ionic/angular/standalone';
+
+import { FilterCouponCategoryPipe } from '../pipes/filter-coupon-category-pipe';
+import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss'],
-imports: [
-    IonContent,
+  imports: [
+    IonSegmentView,
+    IonSegmentContent,
     IonSegment,
     IonSegmentButton,
     IonLabel,
-    IonSegmentView,
-    IonSegmentContent
-]})
+    IonGrid,
+    IonRow,
+    IonCol,
+    IonCard,
+    IonImg,
+    IonCardHeader,
+    IonCardSubtitle,
+    IonCardTitle,
+    FilterCouponCategoryPipe
+]
+})
 export class Tab1Page {
-    private couponService: CouponService = inject(CouponService);
-    coupons: Coupon[] = [];
 
-    async ionViewWillEntender() {
-      this.coupons = await this.couponService.getCoupons();
-      console.log(this.coupons);
-    
-    }
+  coupons: Coupon[] = [];
+  private couponService = inject(CouponService);
+
+  async ionViewWillEnter() {
+    this.coupons = await this.couponService.getCoupons();
+    console.log(this.coupons);
   }
-
-
+}
